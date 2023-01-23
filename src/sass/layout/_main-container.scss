@@ -1,0 +1,25 @@
+@use '../abstract/variables' as *;
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    height: 100vh;
+    // grid-template-rows: 12.5rem 1fr;
+}
+.header {
+    grid-row: 1/2;
+}
+.main-inner-container {
+    grid-row: 2/3;
+}
+.attribution {
+    margin-top: auto;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: $clr-n-ldh-v-d-blue;
+    & > a {
+
+        color: $clr-n-ldh-v-d-blue;
+    }
+}

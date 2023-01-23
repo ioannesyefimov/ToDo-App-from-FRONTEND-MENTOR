@@ -1,0 +1,24 @@
+$clr-p-bright-blue: hsl(220, 98%, 61%);
+$clr-p-check-bg: hsl(192, 100%, 67%), hsl(280, 87%, 65%);
+
+
+$clr-n-lth-v-l-gray:hsl(0, 0%, 98%) ;
+$clr-n-lth-v-l-g-blue:hsl(236, 33%, 92%) ;
+$clr-n-lth-l-g-blue: hsl(233, 11%, 84%);
+$clr-n-lth-d-g-blue: hsl(236, 9%, 61%); 
+$clr-n-lth-v-d-g-blue:hsl(235, 19%, 35%);
+
+$clr-n-ldh-v-d-blue: hsl(235, 21%, 11%);
+$clr-n-ldh-v-d-desat-blue: hsl(235, 24%, 19%);
+$clr-n-ldh-l-g-blue:  hsl(234, 39%, 85%);
+$clr-n-ldh-l-g-blue-hover: hsl(236, 33%, 92%);
+$clr-n-ldh-d-g-blue: hsl(234, 11%, 52%);
+$clr-n-ldh-v-d-g-blue: hsl(233, 14%, 35%);
+$clr-n-ldh-v-d-g-blue2: hsl(237, 14%, 26%);
+
+
+$breakpoints: (
+    'medium': (min-width:650px),
+    'big': (min-width:1100px),
+    'bigger': (min-width:1300px),
+)

@@ -1,0 +1,79 @@
+@use './variables' as *;
+@use './functionality' as *;
+
+
+.main-container[data-theme=light]{
+    @include respond-to(medium){
+        background-image: url('/assets/bg-desktop-light.jpg');
+        background-size: 100% 25vh;    
+    }
+    background-image: url('/assets/bg-mobile-light.jpg');
+    background-color: $clr-n-lth-v-l-gray;
+    background-size: 100% 30vh, 100% 100vh;
+    background-repeat: no-repeat;
+
+        h1 {
+            color: $clr-n-lth-v-l-gray;
+
+        }
+
+        .flex-wrapper1, .flex-wrapper2 {
+            background: $clr-n-lth-v-l-gray;
+
+        }
+        .task {
+           background-color: $clr-n-lth-v-l-gray;
+            color:$clr-n-ldh-v-d-desat-blue;
+            
+        }
+        .tasks-list {
+            background-color: $clr-n-lth-v-l-gray;
+        }
+        .task-search{
+            background-color: $clr-n-lth-v-l-gray;
+         }
+}
+
+.main-container[data-theme=dark]{
+    @include respond-to(medium){
+        background-image: url('/assets/bg-desktop-dark.jpg');
+        background-size: 100% 25vh;    
+    }
+    background-image: url('/assets/bg-mobile-dark.jpg');
+    background-color: $clr-n-ldh-v-d-blue;
+    background-size: 100% 30vh, 100vw 100vh;
+    background-repeat: no-repeat;
+
+        h1 {
+            color: $clr-n-lth-v-l-gray;
+            
+        }
+        .todo-creator {
+            background:$clr-n-ldh-v-d-desat-blue
+        }
+        .flex-wrapper1,.flex-wrapper2{
+            background: $clr-n-ldh-v-d-desat-blue
+
+        }
+        .task {
+            background-color:$clr-n-ldh-v-d-desat-blue;
+            color: $clr-n-lth-l-g-blue;
+
+        }
+        .task-search{
+           background-color: $clr-n-ldh-v-d-desat-blue;
+           box-shadow: 0 5px 5px 0px rgba(128, 128, 128, 0.050);
+
+        }
+        .tasks-list{
+            box-shadow: 0 5px 5px 0px rgba(128, 128, 128, 0.050);
+
+        }
+        .attribution {
+            color: $clr-n-lth-v-l-gray;
+            & > a {
+                color: $clr-n-lth-v-l-gray
+            }
+        }
+}
+

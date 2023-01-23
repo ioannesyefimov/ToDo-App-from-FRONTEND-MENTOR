@@ -1,0 +1,16 @@
+@use '../abstract/variables' as *;
+@use '../abstract/functionality' as *;
+
+.main-inner-container {
+    display: grid;
+    padding: 0 2.5rem;
+    border-radius: 8px;
+    gap:2rem;
+
+}
+.hint {
+    margin: 3rem;
+    text-align: center;
+    color:$clr-n-lth-d-g-blue;
+    font-weight: weights(bold);
+}

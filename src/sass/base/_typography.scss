@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+$font-weights: (
+    "regular": 400,
+    "bold": 700,
+);
+
+body {
+    font-size: 18px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.header {
+    h1{
+        font-size: 3rem;
+        text-transform: uppercase;
+        letter-spacing: 0.6rem;
+        font-weight: weights(regular);
+    }
+}
+
+.todo-input{
+    font-size: clamp(1.3rem, 0.931rem + 1.574vw, 1.6rem);}
+
+.task span {
+    font-size: clamp(1.3rem, 0.931rem + 1.574vw, 1.6rem);
+}
+.hint {
+    font-size: clamp(1.2rem, 1.112rem + 0.376vw, 1.45rem);}
+
+
+.flex-wrapper2 {
+    button{
+
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,10 @@
+@use '../abstract/variables' as *;
+
+[draggable="true"]{
+    user-select: none;
+}
+
+.dragging {
+    opacity: 0.25;
+    outline: 5px solid rgba(177, 69, 255, 0.393);
+}

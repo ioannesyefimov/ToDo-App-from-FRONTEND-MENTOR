@@ -1,0 +1,33 @@
+@use '../base/typography' as *;
+@use '../abstract/variables' as*;
+
+
+@function weights($weight){
+    @return map-get($font-weights, $weight);
+}
+
+
+@mixin respond-to($breakpoint) {
+    $raw-query: map-get($breakpoints, $breakpoint);
+    
+    @if $raw-query {
+        $query: if(
+            type-of($raw-query) == 'string',
+            unquoute($raw-query),
+            inspect($raw-query)
+        );
+
+        @media #{$query}{
+             @content;
+        }
+    } @else {
+        @error 'No value found for `#{$breakpoint}`. ' + 'Please make sure it is defined in `#{$breakpoints}` map.'
+    }
+};
+
+@mixin gradient($direction, $list...) { 
+    background: -webkit-linear-gradient(to $direction, $list);
+    background: -moz-linear-gradient(to $direction, $list);
+    background: -o-linear-gradient(to $direction, $list);
+    background: linear-gradient(to $direction, $list);  
+}

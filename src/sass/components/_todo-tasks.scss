@@ -1,0 +1,93 @@
+@use '../abstract/variables' as *;
+@use '../abstract/functionality' as *;
+
+.tasks-list {
+
+    @include respond-to(medium) {
+        min-width: 45rem;
+    }
+    box-shadow: 0 20px 10px 1px rgba(128, 128, 128, 0.200);
+    border-radius: 8px;
+    perspective: 10px;
+    align-self: flex-start;
+    overflow: hidden;
+
+
+       
+    .task {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap:1.5rem;
+        padding: 1.7rem 1.6rem;
+
+        &::after{
+            position: absolute;
+            z-index: 3;
+            content: '';
+            width: 100%;
+            bottom: 0;
+            right: 0;
+            height: 1px;
+            background-color: $clr-n-lth-d-g-blue;
+        }
+        .wrapper {
+            display: flex;
+            gap:1rem
+        }
+        .btn-mark {
+            padding: 1rem;
+            background: transparent;
+            border: $clr-n-lth-d-g-blue 1px solid;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+        }
+        
+        .btn-remove {
+            // margin-left: auto;
+            // position: relative;
+            background: transparent;
+            border: none;
+            min-width: 2vw;
+            height: 25px;
+            background: url('/assets/icon-cross.svg');
+            background-repeat: no-repeat;
+            
+        }
+        
+        .done {
+            
+            
+            text-decoration: line-through;
+            color:$clr-n-lth-d-g-blue;
+        }
+        .done-btn {
+            position: relative;
+            @include gradient(right bottom, $clr-p-check-bg);
+            &::after{
+                position: absolute;
+                z-index: 1;
+                right: 0;
+                top: -5%;
+                // bottom: 100%;
+                width: 100%;
+                content: url('/assets/icon-check.svg') ;
+                
+            }
+        }
+    }
+    .draggable-task {
+        position: absolute;
+        cursor: move;
+        user-select: none;
+
+    }
+}
+    
+
+
+
+
+

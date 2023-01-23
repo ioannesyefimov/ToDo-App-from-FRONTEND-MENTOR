@@ -1,0 +1,70 @@
+@use '../abstract/variables' as *;
+@use '../abstract/functionality' as *;
+
+.task-search{
+    @include respond-to(medium){
+        grid-template-columns:1fr 45% 1fr;
+        min-width: 50rem;
+
+    }
+    align-self: flex-start;
+    padding: 0 1.5rem;
+    display: grid;
+    gap:1rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 10px 1px rgba(128, 128, 128, 0.200);
+
+    button {
+        color:$clr-n-ldh-d-g-blue;
+        
+    }
+    .active {
+            color: $clr-p-bright-blue;
+
+    }
+
+    .filter-btn,.counter {
+        @include respond-to(medium){
+            font-size: min(1.5rem, 10vw);
+    
+        }
+        font-size: clamp(1.2rem, 0.791rem + 1.745vw, 1.5rem);
+    }
+
+    .filter-btn{
+        background: transparent;
+        border: none;
+    }
+    .flex-wrapper1{
+        @include respond-to(medium){
+            grid-column: 1/4;
+
+            text-align: left;
+
+            grid-row: 1/2;
+            padding:1.5rem 0;
+
+        }
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+        padding: 1.5rem 0rem;
+        border-radius: 0 0 8px 8px;
+
+        span, button{
+            color: $clr-n-lth-d-g-blue
+        }  
+    }
+    .flex-wrapper2{
+        @include respond-to(medium){
+            margin-right: auto;
+            grid-column: 2/3;
+            grid-row: 1/2;
+            z-index: 3;
+            align-items: center;
+        }
+        font-weight: weights(bold);
+        display: flex;
+        justify-content: center;
+    }
+}
