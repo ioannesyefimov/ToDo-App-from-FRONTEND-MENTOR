@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './sass/App.scss';
 import InputElement from './AppComponents/InputElement';
 import FilterBtns from './AppComponents/FilterBtns';
@@ -59,6 +59,11 @@ function App() {
   const [currentFilter, setCurrentFiltered] = useState(FILTER_NAMES[0])
   const filtered = tasks.filter(FILTER_MAP[currentFilter])
 
+
+  useEffect(() => {
+    document.body.setAttribute(`data-theme`, `${theme}`)
+
+  }, [theme])
   const addTask = (title) => {
     if(title.length < 3) return alert('Please type in valid task 😶')
     let newTask = {title}
@@ -85,6 +90,7 @@ function App() {
 
 
   const HandleTheme = () => {
+    
   if(theme === 'light'){
           setTheme("dark")
           setIcon('sun')

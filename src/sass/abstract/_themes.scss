@@ -2,7 +2,7 @@
 @use './functionality' as *;
 
 
-.main-container[data-theme=light]{
+body[data-theme=light]{
     @include respond-to(medium){
         background-image: url('/assets/bg-desktop-light.jpg');
         background-size: 100% 25vh;    
@@ -34,7 +34,7 @@
          }
 }
 
-.main-container[data-theme=dark]{
+body[data-theme=dark]{
     @include respond-to(medium){
         background-image: url('/assets/bg-desktop-dark.jpg');
         background-size: 100% 25vh;    
